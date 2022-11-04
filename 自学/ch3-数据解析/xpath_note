@@ -1,0 +1,21 @@
+xpath解析数据流程:
+-实例化一个etree对象并连接数据
+-对用方法定位标签
+
+如何实例化对象:
+    -1.本地:etree.parse(filepath)
+    -2.在线:etree.HTML(page_text)
+
+如何解析:
+    etree.xpath('xpath表达式')
+
+xpath 表达式:
+    - /:表示的是从根节点开始定位.表示的是一个层级
+    - //:表示的是从任意位置开始定位.表示的多个层级
+    - 属性定位://div[@class="song"] tag[@attrname="attrvalue"]\
+    - 索引定位://div[@class="song"]/p[3] 索引从1开始
+    - 取文本:
+            - /text() 获取的是标签中的直系文本
+            - //text() 标签下所有的文本内容
+    - 其属性:
+            - @attrname /img/@src
