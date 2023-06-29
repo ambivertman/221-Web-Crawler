@@ -20,10 +20,10 @@ class bili_dm_crawler:
         # account = input("输入B站账号:")
         # passwords = input("输入B站账号密码:")
         bro.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div[3]/div[2]/div[1]/input').send_keys(
-            '15720938396')
+            'youraccountID')
         sleep(2)
         bro.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div[3]/div[2]/div[2]/div[1]/input').send_keys(
-            'liu2947107208~')
+            'yourpassword')
         sleep(2)
         bro.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div[3]/div[3]/div[2]').click()
         bro.delete_all_cookies()  # 先删除cookies
